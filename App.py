@@ -73,7 +73,7 @@ st.markdown("""
 # 加载模型
 @st.cache_resource
 def load_model():
-    return joblib.load("Catboost.pkl")
+    return joblib.load("GBDT.pkl")
 
 model = load_model()
 
@@ -157,3 +157,4 @@ if prediction is not None and df_result is not None:
         file_name=text["file_name"],
         mime="text/csv"
     )
+
